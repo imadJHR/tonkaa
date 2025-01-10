@@ -1,59 +1,246 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
-import { Button } from "@/components/ui/button";
-import { ShoppingCart } from 'lucide-react';
+import A from "../assets/A.jpg"
+import B from "../assets/B.jpg"
+import C from "../assets/C.jpg"
+import D from "../assets/D.jpg"
+import E from "../assets/E.jpg"
+import F from "../assets/F.jpg"
+import G from "../assets/G.jpg"
+import H from "../assets/H.jpg"
+import I from "../assets/I.jpg"
+import J from "../assets/J.jpg"
+import K from "../assets/K.jpg"
+import L from "../assets/L.jpg"
+import M from "../assets/M.jpg"
+import N from "../assets/N.jpg"
+import O from "../assets/O.jpg"
+import P from "../assets/P.jpg"
+import Q from "../assets/Q.jpg"
+import R from "../assets/R.jpg"
+import S from "../assets/S.jpg"
+import T from "../assets/T.jpg"
+import U from "../assets/U.jpg"
+import V from "../assets/V.jpg"
+import W from "../assets/W.jpg"
+import X from "../assets/X.jpg"
+import Y from "../assets/Y.jpg"
+import Z from "../assets/Z.jpg"
+import img9 from "../assets/img9.jpg"
 
 const Products = () => {
   const products = [
     {
-      name: "Truffes au chocolat noir",
-      description: "Truffes au chocolat noir riches avec un cœur de ganache lisse, faites à la main par nos maîtres chocolatiers",
-      image: "https://images.unsplash.com/photo-1551529834-525807d6b4f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      category: "Collection Signature",
-      price: "24,99€",
-      weight: "200g"
+      name: "les Tablettes",
+      description: "",
+      image:A ,
+      category: "",
+      price: "",
+      weight: ""
     },
     {
-      name: "Pralines au chocolat au lait",
-      description: "Pralines au chocolat au lait crémeuses remplies de crème de noisette, un parfait équilibre entre douceur et noisette",
-      image: "https://images.unsplash.com/photo-1548907040-4d42bfc0c5c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      category: "Collection Classique",
-      price: "22,99€",
-      weight: "180g"
+      name: " La Tablette à casser",
+      description: "",
+      image: B,
+      category: "",
+      price: "",
+      weight: ""
     },
     {
-      name: "Barres au chocolat blanc et framboise",
-      description: "Barres de chocolat blanc lisses avec un cœur de framboise acidulée, un contraste délicieux de saveurs",
-      image: "https://images.unsplash.com/photo-1614088685112-0a760b71a3c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      category: "Fusion Fruitée",
-      price: "19,99€",
-      weight: "150g"
+      name: "La Square fourée",
+      description: "",
+      image: C,
+      category: "",
+      price: "",
+      weight: ""
     },
     {
-      name: "Bonbons au caramel salé",
-      description: "Bonbons au chocolat noir luxueux remplis de notre caramel salé signature, un parfait mélange sucré-salé",
-      image: "https://images.unsplash.com/photo-1605525299832-ecd9f1c5bfb9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      category: "Sélection Gourmet",
-      price: "27,99€",
-      weight: "220g"
+      name: "BOITES",
+      description: "",
+      image: D,
+      category: "",
+      price: "",
+      weight: ""
     },
     {
-      name: "Écorce de chocolat pistache",
-      description: "Écorce de chocolat noir artisanale parsemée de pistaches grillées et d'une pointe de sel de mer",
-      image: "https://images.unsplash.com/photo-1613806497096-c1f6a51e0d7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      category: "Créations Artisanales",
-      price: "21,99€",
-      weight: "175g"
+      name: "Boite à chapeau prestige",
+      description: "",
+      image: E,
+      category: "",
+      price: "",
+      weight: ""
     },
     {
-      name: "Truffes à l'orange",
-      description: "Truffes délicates au chocolat noir infusées de zestes d'orange naturelle pour une touche rafraîchissante",
-      image: "https://images.unsplash.com/photo-1605525298899-6e4e8b1c6f0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      category: "Collection Signature",
-      price: "25,99€",
-      weight: "200g"
-    }
+      name: "coffert inca",
+      description: "",
+      image: F,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "collection coya",
+      description: "",
+      image: G,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    
+    {
+      name: "collection intihuatana",
+      description: "",
+      image: H,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "collection inti",
+      description: "",
+      image: I,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "collection huaca",
+      description: "",
+      image: J,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "collection pizarro",
+      description: "",
+      image: K,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "collection yucatan",
+      description: "",
+      image: L,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "collection zama",
+      description: "",
+      image: M,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "coupe coba",
+      description: "",
+      image: N,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "collection cozumel",
+      description: "",
+      image: O,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "collection tulum",
+      description: "",
+      image: P,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "collection zama",
+      description: "",
+      image: Q,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "collection yucatan",
+      description: "",
+      image: R,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "coupe ajua",
+      description: "",
+      image: S,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "coupe tankah",
+      description: "",
+      image: T,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "coupe xelha",
+      description: "",
+      image: U,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "plateaux itzel",
+      description: "",
+      image: V,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "coupe itzia",
+      description: "",
+      image: W,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: " vases pakal",
+      description: "",
+      image: X,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "collection maya",
+      description: "",
+      image: Y,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    {
+      name: "coupes izamal",
+      description: "",
+      image: Z,
+      category: "",
+      price: "",
+      weight: ""
+    },
+    
   ];
   
 
@@ -102,7 +289,7 @@ const Products = () => {
   
 
   return (
-    <div className="min-h-screen bg-[#1a0f0f] text-[#e6ccb2]">
+    <div className="min-h-screen bg-gradient-to-b from-[#1a0f0f] to-[#2a1f1f] text-[#e6ccb2]">
       <Helmet>
         <title>Luxury Chocolate Collection | L'Atelier TONKA</title>
         <meta name="description" content="Discover our exquisite collection of handcrafted chocolates. From rich dark chocolate truffles to creamy milk chocolate pralines, indulge in the artistry of fine chocolate making." />
@@ -125,7 +312,7 @@ const Products = () => {
           transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1526081347589-7fa3cb41b4b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")',
+            backgroundImage: `url(${img9})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
@@ -136,7 +323,7 @@ const Products = () => {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-6xl md:text-7xl font-bold mb-6"
+            className="text-6xl md:text-7xl font-bold mb-6 font-serif"
           >
             Notre Collection
           </motion.h1>
@@ -144,7 +331,7 @@ const Products = () => {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-xl md:text-2xl max-w-2xl mx-auto px-4"
+            className="text-xl md:text-2xl max-w-2xl mx-auto px-4 font-light"
           >
             Découvrez l'art de la chocolaterie fine, où chaque pièce est une œuvre d'art gustative
           </motion.p>
@@ -158,75 +345,67 @@ const Products = () => {
         animate="visible"
         className="container mx-auto px-4 py-20"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {products.map((product, index) => (
             <motion.div
               key={product.name}
               variants={itemVariants}
               whileHover={{ y: -10 }}
-              className="group"
+              className="group bg-[#2a1f1f] rounded-xl overflow-hidden shadow-2xl hover:shadow-[#8B4513]/20 transition-all duration-300"
             >
-              <div className="relative overflow-hidden rounded-lg aspect-square mb-6">
+              <div className="relative overflow-hidden aspect-square">
                 <motion.img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.6 }}
+                  className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                 />
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                  className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end p-6"
-                >
-                  <div>
-                    <p className="text-sm text-[#8B4513] font-medium mb-2">
-                      {product.category}
-                    </p>
-                    <p className="text-white text-sm line-clamp-2">
-                      {product.description}
-                    </p>
-                  </div>
-                </motion.div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 * index }}
-              >
-                <h3 className="text-2xl font-bold mb-2">{product.name}</h3>
-                <p className="text-[#8B4513] font-medium mb-2">
-                  {product.category}
-                </p>
-                
-                
-              </motion.div>
+              <div className="p-6">
+                <h3 className="text-xl font-serif font-bold mb-2 text-[#e6ccb2] group-hover:text-[#8B4513] transition-colors duration-300">
+                  {product.name}
+                </h3>
+                {product.category && (
+                  <p className="text-sm text-[#8B4513] font-medium mb-2">
+                    {product.category}
+                  </p>
+                )}
+                {product.description && (
+                  <p className="text-sm text-[#e6ccb2]/80 line-clamp-2 group-hover:text-[#e6ccb2] transition-colors duration-300">
+                    {product.description}
+                  </p>
+                )}
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  whileHover={{ scaleX: 1 }}
+                  className="h-0.5 bg-[#8B4513] mt-4 origin-left"
+                />
+              </div>
             </motion.div>
           ))}
         </div>
       </motion.div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-1/2 left-0 w-24 h-24 bg-[#8B4513]/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-0 w-32 h-32 bg-[#8B4513]/10 rounded-full blur-3xl" />
-
-      {/* Additional SEO Content */}
-      <section className="bg-[#241515] py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-8 text-center">Notre Engagement envers la Qualité</h2>
-          <div className="max-w-3xl mx-auto">
-            <p className="text-lg mb-6">
+      {/* Quality Statement Section */}
+      <section className="bg-[#241515] py-16 relative overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-4xl font-serif font-bold mb-12 text-center">
+            Notre Engagement envers la Qualité
+          </h2>
+          <div className="max-w-3xl mx-auto space-y-6 text-[#e6ccb2]/90">
+            <p className="text-lg leading-relaxed">
               Chez L'Atelier TONKA, nous nous engageons à offrir une expérience chocolatée incomparable. Chaque produit de notre collection est le fruit d'un savoir-faire artisanal, utilisant les meilleurs ingrédients sourcés de manière éthique et durable.
             </p>
-            <p className="text-lg mb-6">
+            <p className="text-lg leading-relaxed">
               Nos maîtres chocolatiers combinent des techniques traditionnelles avec des innovations modernes pour créer des saveurs uniques qui raviront vos papilles. De la sélection des fèves de cacao à l'emballage final, chaque étape est réalisée avec le plus grand soin pour garantir une qualité exceptionnelle.
             </p>
-            <p className="text-lg">
+            <p className="text-lg leading-relaxed">
               Que vous choisissiez nos truffes au chocolat noir intense, nos pralines au lait onctueux ou nos créations fruitées, vous pouvez être assuré que chaque bouchée est une célébration de l'art du chocolat.
             </p>
           </div>
         </div>
+        <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#8B4513]/5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#8B4513]/5 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2" />
       </section>
     </div>
   );

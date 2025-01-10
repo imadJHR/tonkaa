@@ -62,5 +62,13 @@
   }
   body {
     @apply bg-background text-foreground;
+    @apply font-serif;
   }
+}
+@font-face {
+  font-family: 'Denton Serif';
+  src: url('/fonts/denton-serif.woff2') format('woff2'),
+       url('/fonts/denton-serif.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }

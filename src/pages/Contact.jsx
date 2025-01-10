@@ -12,15 +12,8 @@ const Contact = () => {
       name: "L'atelier Tonka - Casablanca",
       address: "123 Boulevard Mohammed V, Casablanca 20000, Maroc",
       phone: "+212 661-150994",
-      email: "contact@ateliertonka.com",
+      email: "ghizlanama@gmail.com<",
       hours: "Lun-Sam: 10h-19h, Dim: 11h-17h",
-    },
-    {
-      name: "L'atelier Tonka - Marrakech",
-      address: "45 Rue Moulay Ismail, Marrakech 40000, Maroc",
-      phone: "+212 524-456789",
-      email: "marrakech@ateliertonka.com",
-      hours: "Lun-Sam: 9h-20h, Dim: 10h-18h",
     },
   ];
 

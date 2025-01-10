@@ -42,20 +42,16 @@ const Home = () => {
     {
       quote:
         "Hello ! Merci beaucoup ! Alors c'était très très bon !!! Mais j'avoue que j'ai plus aimé la mousse! C'est une turie!!!",
-      author: "Marie L.",
     },
     {
       quote: "La mousse était très bonne et a eu beaucoup de succès",
-      author: "Jean-Pierre D.",
     },
     {
       quote: "C'était une tuerie!! Bravo !",
-      author: "Sophie M.",
     },
     {
       quote:
         "Merci beaucoup pour la mousse qui était excellente. Bravo!!! Nous n'avons pas encore goûté les chocolats. Bon We! Sylvie & Pascal",
-      author: "Sylvie & Pascal R.",
     },
   ];
 
