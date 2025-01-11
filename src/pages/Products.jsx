@@ -1,43 +1,44 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet';
-import A from "../assets/A.jpg"
-import B from "../assets/B.jpg"
-import C from "../assets/C.jpg"
-import D from "../assets/D.jpg"
-import E from "../assets/E.jpg"
-import F from "../assets/F.jpg"
-import G from "../assets/G.jpg"
-import H from "../assets/H.jpg"
-import I from "../assets/I.jpg"
-import J from "../assets/J.jpg"
-import K from "../assets/K.jpg"
-import L from "../assets/L.jpg"
-import M from "../assets/M.jpg"
-import N from "../assets/N.jpg"
-import O from "../assets/O.jpg"
-import P from "../assets/P.jpg"
-import Q from "../assets/Q.jpg"
-import R from "../assets/R.jpg"
-import S from "../assets/S.jpg"
-import T from "../assets/T.jpg"
-import U from "../assets/U.jpg"
-import V from "../assets/V.jpg"
-import W from "../assets/W.jpg"
-import X from "../assets/X.jpg"
-import Y from "../assets/Y.jpg"
-import Z from "../assets/Z.jpg"
-import img9 from "../assets/img9.jpg"
-
+import React from "react";
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
+import A from "../assets/A.jpg";
+import B from "../assets/B.jpg";
+import C from "../assets/C.jpg";
+import D from "../assets/D.jpg";
+import E from "../assets/E.jpg";
+import F from "../assets/F.jpg";
+import G from "../assets/G.jpg";
+import H from "../assets/H.jpg";
+import I from "../assets/I.jpg";
+import J from "../assets/J.jpg";
+import K from "../assets/K.jpg";
+import L from "../assets/L.jpg";
+import M from "../assets/M.jpg";
+import N from "../assets/N.jpg";
+import O from "../assets/O.jpg";
+import P from "../assets/P.jpg";
+import Q from "../assets/Q.jpg";
+import R from "../assets/R.jpg";
+import S from "../assets/S.jpg";
+import T from "../assets/T.jpg";
+import U from "../assets/U.jpg";
+import V from "../assets/V.jpg";
+import W from "../assets/W.jpg";
+import X from "../assets/X.jpg";
+import Y from "../assets/Y.jpg";
+import Z from "../assets/Z.jpg";
+import img9 from "../assets/img9.jpg";
+import { Link } from "react-router-dom";
+import PDF from "../../public/CATALOGUE TONKA 2024 2025.pdf";
 const Products = () => {
   const products = [
     {
       name: "les Tablettes",
       description: "",
-      image:A ,
+      image: A,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: " La Tablette à casser",
@@ -45,7 +46,7 @@ const Products = () => {
       image: B,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "La Square fourée",
@@ -53,7 +54,7 @@ const Products = () => {
       image: C,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "BOITES",
@@ -61,7 +62,7 @@ const Products = () => {
       image: D,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "Boite à chapeau prestige",
@@ -69,7 +70,7 @@ const Products = () => {
       image: E,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "coffert inca",
@@ -77,7 +78,7 @@ const Products = () => {
       image: F,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "collection coya",
@@ -85,16 +86,16 @@ const Products = () => {
       image: G,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
-    
+
     {
       name: "collection intihuatana",
       description: "",
       image: H,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "collection inti",
@@ -102,7 +103,7 @@ const Products = () => {
       image: I,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "collection huaca",
@@ -110,7 +111,7 @@ const Products = () => {
       image: J,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "collection pizarro",
@@ -118,7 +119,7 @@ const Products = () => {
       image: K,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "collection yucatan",
@@ -126,7 +127,7 @@ const Products = () => {
       image: L,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "collection zama",
@@ -134,7 +135,7 @@ const Products = () => {
       image: M,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "coupe coba",
@@ -142,7 +143,7 @@ const Products = () => {
       image: N,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "collection cozumel",
@@ -150,7 +151,7 @@ const Products = () => {
       image: O,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "collection tulum",
@@ -158,7 +159,7 @@ const Products = () => {
       image: P,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "collection zama",
@@ -166,7 +167,7 @@ const Products = () => {
       image: Q,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "collection yucatan",
@@ -174,7 +175,7 @@ const Products = () => {
       image: R,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "coupe ajua",
@@ -182,7 +183,7 @@ const Products = () => {
       image: S,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "coupe tankah",
@@ -190,7 +191,7 @@ const Products = () => {
       image: T,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "coupe xelha",
@@ -198,7 +199,7 @@ const Products = () => {
       image: U,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "plateaux itzel",
@@ -206,7 +207,7 @@ const Products = () => {
       image: V,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "coupe itzia",
@@ -214,7 +215,7 @@ const Products = () => {
       image: W,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: " vases pakal",
@@ -222,7 +223,7 @@ const Products = () => {
       image: X,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "collection maya",
@@ -230,7 +231,7 @@ const Products = () => {
       image: Y,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
     {
       name: "coupes izamal",
@@ -238,20 +239,18 @@ const Products = () => {
       image: Z,
       category: "",
       price: "",
-      weight: ""
+      weight: "",
     },
-    
   ];
-  
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -261,39 +260,44 @@ const Products = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "itemListElement": products.map((product, index) => ({
+    itemListElement: products.map((product, index) => ({
       "@type": "ListItem",
-      "position": index + 1,
-      "item": {
+      position: index + 1,
+      item: {
         "@type": "Product",
-        "name": product.name,
-        "description": product.description,
-        "image": product.image,
-        "category": product.category,
-        "offers": {
+        name: product.name,
+        description: product.description,
+        image: product.image,
+        category: product.category,
+        offers: {
           "@type": "Offer",
-          "price": product.price.replace('€', ''),
-          "priceCurrency": "EUR"
-        }
-      }
-    }))
+          price: product.price.replace("€", ""),
+          priceCurrency: "EUR",
+        },
+      },
+    })),
   };
-  
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#1a0f0f] to-[#2a1f1f] text-[#e6ccb2]">
       <Helmet>
         <title>Luxury Chocolate Collection | L'Atelier TONKA</title>
-        <meta name="description" content="Discover our exquisite collection of handcrafted chocolates. From rich dark chocolate truffles to creamy milk chocolate pralines, indulge in the artistry of fine chocolate making." />
-        <meta name="keywords" content="luxury chocolates, artisan chocolates, chocolate truffles, pralines, chocolate bars, gourmet chocolates" />
+        <meta
+          name="description"
+          content="Discover our exquisite collection of handcrafted chocolates. From rich dark chocolate truffles to creamy milk chocolate pralines, indulge in the artistry of fine chocolate making."
+        />
+        <meta
+          name="keywords"
+          content="luxury chocolates, artisan chocolates, chocolate truffles, pralines, chocolate bars, gourmet chocolates"
+        />
         <link rel="canonical" href="https://www.ateliertonka.com/products" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -313,8 +317,8 @@ const Products = () => {
           className="absolute inset-0 z-0"
           style={{
             backgroundImage: `url(${img9})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         />
         <div className="absolute inset-0 bg-black/60 z-10" />
@@ -333,7 +337,8 @@ const Products = () => {
             transition={{ delay: 0.4 }}
             className="text-xl md:text-2xl max-w-2xl mx-auto px-4 font-light"
           >
-            Découvrez l'art de la chocolaterie fine, où chaque pièce est une œuvre d'art gustative
+            Découvrez l'art de la chocolaterie fine, où chaque pièce est une
+            œuvre d'art gustative
           </motion.p>
         </div>
       </motion.section>
@@ -345,8 +350,8 @@ const Products = () => {
         animate="visible"
         className="container mx-auto px-4 py-20"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {products.map((product, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {products.map((product) => (
             <motion.div
               key={product.name}
               variants={itemVariants}
@@ -384,6 +389,18 @@ const Products = () => {
             </motion.div>
           ))}
         </div>
+
+        <div className="flex justify-center py-16 items-center">
+          <a
+            href="https://green-austin-25.tiiny.site/" // Chemin relatif au fichier dans le dossier public
+            download="CATALOGUE_TONKA_2024_2025.pdf"
+            target="_blank"
+          >
+            <button className="bg-[#8B4513] hover:bg-[#8B4513]/80 text-[#e6ccb2] hover:text-[#e6ccb2] transition-colors duration-300 px-6 py-3 rounded-full text-lg font-medium">
+              voir tout notre catalogue
+            </button>
+          </a>
+        </div>
       </motion.div>
 
       {/* Quality Statement Section */}
@@ -394,13 +411,23 @@ const Products = () => {
           </h2>
           <div className="max-w-3xl mx-auto space-y-6 text-[#e6ccb2]/90">
             <p className="text-lg leading-relaxed">
-              Chez L'Atelier TONKA, nous nous engageons à offrir une expérience chocolatée incomparable. Chaque produit de notre collection est le fruit d'un savoir-faire artisanal, utilisant les meilleurs ingrédients sourcés de manière éthique et durable.
+              Chez L'Atelier TONKA, nous nous engageons à offrir une expérience
+              chocolatée incomparable. Chaque produit de notre collection est le
+              fruit d'un savoir-faire artisanal, utilisant les meilleurs
+              ingrédients sourcés de manière éthique et durable.
             </p>
             <p className="text-lg leading-relaxed">
-              Nos maîtres chocolatiers combinent des techniques traditionnelles avec des innovations modernes pour créer des saveurs uniques qui raviront vos papilles. De la sélection des fèves de cacao à l'emballage final, chaque étape est réalisée avec le plus grand soin pour garantir une qualité exceptionnelle.
+              Nos maîtres chocolatiers combinent des techniques traditionnelles
+              avec des innovations modernes pour créer des saveurs uniques qui
+              raviront vos papilles. De la sélection des fèves de cacao à
+              l'emballage final, chaque étape est réalisée avec le plus grand
+              soin pour garantir une qualité exceptionnelle.
             </p>
             <p className="text-lg leading-relaxed">
-              Que vous choisissiez nos truffes au chocolat noir intense, nos pralines au lait onctueux ou nos créations fruitées, vous pouvez être assuré que chaque bouchée est une célébration de l'art du chocolat.
+              Que vous choisissiez nos truffes au chocolat noir intense, nos
+              pralines au lait onctueux ou nos créations fruitées, vous pouvez
+              être assuré que chaque bouchée est une célébration de l'art du
+              chocolat.
             </p>
           </div>
         </div>
@@ -412,4 +439,3 @@ const Products = () => {
 };
 
 export default Products;
-

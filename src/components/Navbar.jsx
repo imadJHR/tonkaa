@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Coffee, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logo from "../assets/logo.png";
 
@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-           <img src={logo} className="w-12 h-12" alt="" />
+            <img src={logo} className="w-12 h-12" alt="Logo" />
           </Link>
 
           {/* Desktop Menu */}
@@ -66,6 +66,25 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
+
+          {/* Catalog Download Button */}
+          <motion.div
+            className="hidden lg:block"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <a
+              href="https://green-austin-25.tiiny.site/"
+              download="CATALOGUE_TONKA_2024_2025.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <button className="bg-[#8B4513] hover:bg-[#8B4513]/80 text-[#e6ccb2] transition-colors duration-300 px-6 py-3 rounded-full text-sm font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0">
+                Voir tout notre catalogue
+              </button>
+            </a>
+          </motion.div>
 
           {/* Mobile Menu Button */}
           <Button
@@ -102,6 +121,20 @@ const Navbar = () => {
                     {link.label}
                   </Link>
                 ))}
+                {/* Mobile Catalog Download Button */}
+                <div className="px-4 py-2">
+                  <a
+                    href="https://green-austin-25.tiiny.site/"
+                    download="CATALOGUE_TONKA_2024_2025.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full"
+                  >
+                    <button className="w-full bg-[#8B4513] hover:bg-[#8B4513]/80 text-[#e6ccb2] transition-colors duration-300 px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1 active:translate-y-0">
+                      Voir tout notre catalogue
+                    </button>
+                  </a>
+                </div>
               </div>
             </motion.div>
           )}
@@ -112,4 +145,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

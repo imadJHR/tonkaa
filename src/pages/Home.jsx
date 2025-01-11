@@ -1,42 +1,40 @@
-import React from "react";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import img1 from "../assets/img1.jpg";
-import img7 from "../assets/img7.jpg";
 import img8 from "../assets/img8.jpg";
-import img17 from "../assets/img17.jpg";
+import home3 from "../assets/home3.jpg";
 import { Link } from "react-router-dom";
+import home1 from "../assets/Home1.jpg";
 
 const Home = () => {
   const featuredProducts = [
     {
-      title: "L'élégance de la truffe",
-      description:
-        "Truffes veloutées au chocolat noir avec une pointe de sel de mer",
-      image: img7,
+      title: "ART DE LA TABLE CERAMIQUE",
+      description: "Élégants articles en céramique pour une table raffinée.",
+      image: home1,
       price: "",
       rating: 4.8,
     },
     {
-      title: "Paradis de la praline",
-      description:
-        "Pralines délicates fourrées à la crème de noisettes torréfiées",
+      title: "Nos Boites Et Coffrets",
+      description: "Boîtes et coffrets pratiques et stylés.",
       image: img8,
       price: "",
       rating: 4.9,
     },
     {
-      title: "Artisan Bars",
-      description:
-        "Des barres de chocolat d'origine unique, fabriquées à la perfection",
-      image: img17,
+      title: "ART DE LA TABLE METAL",
+      description: "Articles en métal pour une touche moderne.",
+      image: home3,
       price: "",
       rating: 4.7,
     },
   ];
+  
+  
 
   const testimonials = [
     {
@@ -186,7 +184,7 @@ const Home = () => {
           >
             Notre Collection Signature
           </motion.h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
+          <Link to={"/products"} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
             {featuredProducts.map((product, index) => (
               <motion.div
                 key={product.title}
@@ -218,7 +216,7 @@ const Home = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </Link>
         </div>
       </section>
 
