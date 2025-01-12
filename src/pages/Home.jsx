@@ -8,6 +8,9 @@ import img8 from "../assets/img8.jpg";
 import home3 from "../assets/home3.jpg";
 import { Link } from "react-router-dom";
 import home1 from "../assets/Home1.jpg";
+import video1 from "../assets/video1.mp4";
+import video2 from "../assets/video2.mp4";
+import video3 from "../assets/video3.mp4";
 
 const Home = () => {
   const featuredProducts = [
@@ -33,8 +36,6 @@ const Home = () => {
       rating: 4.7,
     },
   ];
-  
-  
 
   const testimonials = [
     {
@@ -137,7 +138,7 @@ const Home = () => {
               Découvrez l'art de l'artisanat du chocolat chez L'Atelier TONKA,
               où chaque pièce raconte une histoire de passion et de tradition
             </p>
-            <Link to={"/products"}>
+            <Link to="/collection">
               <Button
                 size="lg"
                 className="bg-[#8B4513] hover:bg-[#654321] text-[#e6ccb2] px-6 py-3 text-base md:text-lg"
@@ -172,46 +173,166 @@ const Home = () => {
           ))}
         </div>
       </Marquee>
+      {/* Video Reels Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-[#1a0f00] via-[#2d1810] to-[#1a0f00] relative overflow-hidden">
+        {/* Background Animation */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOEI0NTEzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] animate-[pan_20s_linear_infinite]" />
+        </div>
 
-      {/* Featured Products */}
-      <section className="py-12 md:py-20">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-center mb-8 md:mb-16 text-[#e6ccb2]"
+            className="text-4xl md:text-6xl font-bold mb-16 text-center text-[#e6ccb2] relative"
           >
-            Notre Collection Signature
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#e6ccb2] via-[#d4b08c] to-[#e6ccb2] animate-gradient">
+              Nos Dernières Créations
+            </span>
+            <motion.div
+              className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-[#8B4513] to-transparent"
+              initial={{ width: 0 }}
+              whileInView={{ width: 96 }}
+              viewport={{ once: true }}
+            />
           </motion.h2>
-          <Link to={"/products"} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 relative">
+            {[
+              {
+                video: video1,
+                title: "Truffes Signature",
+                description:
+                  "Notre collection exclusive de truffes artisanales",
+              },
+              {
+                video: video2,
+                title: "Pralinés Maison",
+                description: "L'art du praliné traditionnel revisité",
+              },
+              {
+                video: video3,
+                title: "Tablettes Artisanales",
+                description: "Des saveurs uniques à partager",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.2,
+                  ease: [0.21, 1.11, 0.81, 0.99],
+                }}
+                viewport={{ once: true }}
+                className="relative group"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-[#8B4513] via-[#d4b08c] to-[#8B4513] rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient-xy overflow-hidden" />
+                <div className="relative rounded-xl overflow-hidden bg-[#1a0f0f] ring-1 ring-gray-900/5 leading-none">
+                  <div className="aspect-[9/16] overflow-hidden">
+                    <video
+                      className="w-full h-full object-cover transform transition-all duration-700 group-hover:scale-110"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    >
+                      <source src={item.video} type="video/mp4" />
+                      Votre navigateur ne supporte pas la lecture de vidéos.
+                    </video>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Products Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-[#1a0f00] via-[#2d1810] to-[#1a0f00] relative overflow-hidden">
+        {/* Animated background pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOEI0NTEzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] animate-[pan_20s_linear_infinite]" />
+        </div>
+
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-6xl font-bold mb-16 text-center text-[#e6ccb2] relative"
+            >
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#e6ccb2] via-[#d4b08c] to-[#e6ccb2] animate-gradient">
+                Notre Collection Signature
+              </span>
+              <motion.div
+                className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-[#8B4513] to-transparent"
+                initial={{ width: 0 }}
+                whileInView={{ width: 96 }}
+                viewport={{ once: true }}
+              />
+            </motion.h2>
+          </motion.div>
+
+          <Link
+            to="/collection"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
+          >
             {featuredProducts.map((product, index) => (
               <motion.div
                 key={product.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.2,
+                  ease: [0.21, 1.11, 0.81, 0.99],
+                }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className="group relative overflow-hidden rounded-2xl shadow-xl"
+                className="relative group"
               >
-                <div className="aspect-w-3 aspect-h-4">
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-4 md:p-8">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2 text-[#e6ccb2]">
-                    {product.title}
-                  </h3>
-                  <p className="text-sm md:text-base text-[#d4b08c] mb-4">
-                    {product.description}
-                  </p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-xl md:text-2xl font-bold text-[#e6ccb2]">
-                      {product.price}
-                    </span>
+                {/* Glowing border effect */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-[#8B4513] via-[#d4b08c] to-[#8B4513] rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient-xy overflow-hidden" />
+
+                <div className="relative rounded-xl overflow-hidden bg-[#1a0f0f] ring-1 ring-gray-900/5 leading-none">
+                  <div className="aspect-w-3 aspect-h-4 overflow-hidden">
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="w-full h-[300px] object-cover transform transition-all duration-700 group-hover:scale-110"
+                    />
+                  </div>
+                  {/* Content overlay with glass effect */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500">
+                    <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
+                      <motion.h3
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        className="text-2xl md:text-3xl font-bold text-[#e6ccb2] mb-3"
+                      >
+                        {product.title}
+                      </motion.h3>
+                      <p className="text-[#d4b08c] text-sm md:text-base leading-relaxed lg:opacity-0 lg:group-hover:opacity-100  transition-opacity duration-500 delay-100">
+                        {product.description}
+                      </p>
+                      <div className="mt-10 transform -translate-y-full group-hover:translate-y-0 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 delay-200">
+                        <Button
+                          size="sm"
+                          className="bg-[#8B4513] hover:bg-[#654321] text-[#e6ccb2]"
+                        >
+                          Découvrir <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -234,7 +355,7 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12">
             {testimonials.map((testimonial, index) => (
               <motion.div
-                key={testimonial.author}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -244,36 +365,9 @@ const Home = () => {
                 <p className="text-base md:text-lg mb-4 text-[#d4b08c] italic">
                   "{testimonial.quote}"
                 </p>
-                <p className="text-right text-[#8B4513] font-semibold">
-                  - {testimonial.author}
-                </p>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-12 md:py-20">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-[#e6ccb2]"
-          >
-            Prêt à vous faire plaisir ?
-          </motion.h2>
-          <p className="text-base md:text-xl mb-8 md:mb-12 text-[#d4b08c] max-w-2xl mx-auto">
-            Rejoignez notre communauté d'amateurs de chocolat et soyez les
-            premiers informés de nos dernières créations et offres exclusives.
-          </p>
-          <Button
-            size="lg"
-            className="bg-[#8B4513] hover:bg-[#654321] text-[#e6ccb2] px-6 py-3 text-base md:text-lg"
-          >
-            Abonnez-vous maintenant <ArrowRight className="ml-2" />
-          </Button>
         </div>
       </section>
     </div>

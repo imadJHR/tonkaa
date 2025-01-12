@@ -1,8 +1,6 @@
-
 import { motion } from "framer-motion";
-import { Helmet } from 'react-helmet';
-import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
-import { MapPin, Clock, Phone, Mail, Navigation2, ExternalLink } from 'lucide-react';
+import { Helmet } from "react-helmet";
+import { MapPin, Clock, Phone, Mail, Navigation2, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import img23 from "../assets/img23.jpg";
 import img14 from "../assets/img14.jpg";
@@ -13,33 +11,21 @@ const stores = [
     name: "L'atelier Tonka",
     description:
       "Notre magasin phare au cœur de Casablanca, présentant notre collection complète et des créations exclusives.",
-    address: "123 Boulevard Mohammed V, Casablanca 20000, Maroc",
+    address: "Casablanca 20000, Maroc",
     hours: "Lun-Sam: 10h-19h, Dim: 11h-17h",
     phone: "+212 661-150994",
-    email: "contact@ateliertonka.com",
+    email: "ghizlanama@gmail.com",
     image: img14,
     position: { lat: 33.5731, lng: -7.5898 },
   },
-  
 ];
 
-const mapContainerStyle = {
-  width: "100%",
-  height: "100%",
-};
-
 const Stores = () => {
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "",
-  });
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.2 },
     },
   };
 
@@ -48,70 +34,25 @@ const Stores = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "L'atelier Tonka",
-    "url": "https://www.ateliertonka.com",
-    "logo": "https://www.ateliertonka.com/logo.png",
-    "contactPoint": stores.map(store => ({
-      "@type": "ContactPoint",
-      "telephone": store.phone,
-      "contactType": "customer service",
-      "areaServed": "MA",
-      "availableLanguage": ["French", "Arabic", "English"]
-    })),
-    "location": stores.map(store => ({
-      "@type": "Place",
-      "name": store.name,
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": store.address.split(',')[0],
-        "addressLocality": store.address.split(',')[1].trim().split(' ')[0],
-        "postalCode": store.address.split(',')[1].trim().split(' ')[1],
-        "addressCountry": "MA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": store.position.lat,
-        "longitude": store.position.lng
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "10:00",
-          "closes": "19:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "opens": "11:00",
-          "closes": "17:00"
-        }
-      ]
-    }))
-  };
-
-  if (!isLoaded) return <div>Chargement de la carte...</div>;
+  
 
   return (
     <div className="min-h-screen bg-[#1a0f0f] text-[#e6ccb2]">
       <Helmet>
         <title>Notre Magasin | L'atelier Tonka - Chocolatier Artisanal au Maroc</title>
-        <meta name="description" content="Découvrez nos magasins L'atelier Tonka au Maroc. Visitez-nous à Casablanca et Marrakech pour déguster nos chocolats artisanaux et nos créations exclusives." />
-        <meta name="keywords" content="L'atelier Tonka, chocolatier, Casablanca, Marrakech, chocolat artisanal, boutique chocolat" />
+        <meta
+          name="description"
+          content="Découvrez nos magasins L'atelier Tonka au Maroc. Visitez-nous à Casablanca et Marrakech pour déguster nos chocolats artisanaux et nos créations exclusives."
+        />
+        <meta
+          name="keywords"
+          content="L'atelier Tonka, chocolatier, Casablanca, Marrakech, chocolat artisanal, boutique chocolat"
+        />
         <link rel="canonical" href="https://www.ateliertonka.com/stores" />
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
       </Helmet>
 
       {/* Hero Section */}
@@ -162,19 +103,15 @@ const Stores = () => {
             viewport={{ once: true }}
             className="h-[60vh] rounded-xl overflow-hidden shadow-2xl mb-20"
           >
-            <GoogleMap
-              mapContainerStyle={mapContainerStyle}
-              zoom={6}
-              center={{ lat: 32.1, lng: -7.09 }}
-            >
-              {stores.map((store) => (
-                <Marker
-                  key={store.id}
-                  position={store.position}
-                  title={store.name}
-                />
-              ))}
-            </GoogleMap>
+            {/* Embed Google Maps using iframe */}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1420.841389746577!2d-7.643363471395772!3d33.51145080660166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sma!4v1736620902558!5m2!1sfr!2sma"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
           </motion.div>
 
           {/* Store Listings */}
@@ -189,7 +126,7 @@ const Stores = () => {
                 key={store.id}
                 variants={itemVariants}
                 whileHover={{ y: -10 }}
-                className="bg-[#241515] rounded-xl overflow-hidden group"
+                className="bg-[#241515] rounded-xl overflow-hidden group shadow-lg transition-transform duration-300 ease-in-out"
               >
                 <div className="relative h-48 overflow-hidden">
                   <motion.img
@@ -200,7 +137,7 @@ const Stores = () => {
                     transition={{ duration: 0.6 }}
                   />
                   <div className="absolute top-4 right-4 bg-[#8B4513] p-2 rounded-full">
-                    <Navigation2 className="w-5 h-5" />
+                    <Navigation2 className="w-5 h-5 text-white" />
                   </div>
                 </div>
                 <div className="p-6">
@@ -224,9 +161,11 @@ const Stores = () => {
                       <a href={`mailto:${store.email}`} className="hover:underline">{store.email}</a>
                     </div>
                   </div>
+                  <a href="https://maps.app.goo.gl/TxRbC88PjQ7jdaNA9" target="_blank">
                   <Button className="mt-6 w-full bg-[#8B4513] hover:bg-[#654321] text-white">
                     Obtenir l'itinéraire <ExternalLink className="w-4 h-4 ml-2" />
                   </Button>
+                  </a>
                 </div>
               </motion.div>
             ))}
@@ -256,4 +195,3 @@ const Stores = () => {
 };
 
 export default Stores;
-

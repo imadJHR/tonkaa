@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
 
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -33,10 +34,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/collection" element={<Products />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/stores" element={<Stores />} />
+            <Route path="/magazin" element={<Stores />} />
           </Routes>
         </AnimatePresence>
         <Footer/>

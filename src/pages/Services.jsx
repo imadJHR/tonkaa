@@ -1,8 +1,14 @@
-import React from 'react';
 import { motion } from "framer-motion";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
-import { ChefHat, Gift, Store, Utensils, GraduationCap, Users } from 'lucide-react';
+import {
+  ChefHat,
+  Gift,
+  Store,
+  Utensils,
+  GraduationCap,
+  Users,
+} from "lucide-react";
 import img3 from "../assets/img3.jpg";
 import img12 from "../assets/img12.jpg";
 import img21 from "../assets/img21.jpeg";
@@ -17,13 +23,16 @@ const Services = () => {
         "Travaillez avec nos maîtres chocolatiers pour créer votre propre chef-d'œuvre en chocolat unique.",
       price: "",
       image: img12,
+      link: "https://alvo.chat/5sOo",
     },
     {
       icon: <Gift className="w-12 h-12 text-[#8B4513]" />,
       title: "Cadeaux en chocolat de luxe",
-      description: "Offrez des cadeaux en chocolat personnalisés pour toutes les occasions spéciales.",
+      description:
+        "Offrez des cadeaux en chocolat personnalisés pour toutes les occasions spéciales.",
       price: "",
       image: img21,
+      link: "https://alvo.chat/5sOq",
     },
     {
       icon: <Store className="w-12 h-12 text-[#8B4513]" />,
@@ -32,6 +41,7 @@ const Services = () => {
         "Organisez votre occasion spéciale dans nos élégants salons de chocolat.",
       price: "",
       image: img22,
+      link: "https://alvo.chat/5sOu",
     },
   ];
 
@@ -62,31 +72,34 @@ const Services = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "itemListElement": [
-      ...services,
-      ...experiences
-    ].map((item, index) => ({
+    itemListElement: [...services, ...experiences].map((item, index) => ({
       "@type": "ListItem",
-      "position": index + 1,
-      "item": {
+      position: index + 1,
+      item: {
         "@type": "Service",
-        "name": item.title,
-        "description": item.description,
-        "offers": {
+        name: item.title,
+        description: item.description,
+        offers: {
           "@type": "Offer",
-          "price": item.price.replace('À partir de ', '').replace('€', ''),
-          "priceCurrency": "EUR"
-        }
-      }
-    }))
+          price: item.price.replace("À partir de ", "").replace("€", ""),
+          priceCurrency: "EUR",
+        },
+      },
+    })),
   };
 
   return (
     <div className="pt-20">
       <Helmet>
         <title>Services de Chocolaterie de Luxe | L'Atelier TONKA</title>
-        <meta name="description" content="Découvrez nos services de chocolaterie de luxe : création sur mesure, cadeaux personnalisés, événements privés, dégustations et ateliers. Une expérience chocolatée unique." />
-        <meta name="keywords" content="chocolaterie, services, création sur mesure, cadeaux en chocolat, événements privés, dégustation, ateliers chocolat, team building" />
+        <meta
+          name="description"
+          content="Découvrez nos services de chocolaterie de luxe : création sur mesure, cadeaux personnalisés, événements privés, dégustations et ateliers. Une expérience chocolatée unique."
+        />
+        <meta
+          name="keywords"
+          content="chocolaterie, services, création sur mesure, cadeaux en chocolat, événements privés, dégustation, ateliers chocolat, team building"
+        />
         <link rel="canonical" href="https://www.ateliertonka.com/services" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -122,7 +135,8 @@ const Services = () => {
             transition={{ delay: 0.3 }}
             className="text-xl md:text-2xl max-w-2xl"
           >
-            Découvrez l'art du chocolat comme jamais auparavant avec nos services exclusifs
+            Découvrez l'art du chocolat comme jamais auparavant avec nos
+            services exclusifs
           </motion.p>
         </div>
       </motion.section>
@@ -130,7 +144,9 @@ const Services = () => {
       {/* Main Services */}
       <section className="py-20 bg-[#1a0f0f]">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Services Principaux</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">
+            Services Principaux
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -152,11 +168,19 @@ const Services = () => {
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
                   <p className="text-gray-400 mb-4">{service.description}</p>
-                  <p className="text-[#8B4513] font-semibold mb-4">{service.price}</p>
+                  <p className="text-[#8B4513] font-semibold mb-4">
+                    {service.price}
+                  </p>
                   <div className="mt-auto">
-                    <Button className="bg-[#8B4513] hover:bg-[#654321]">
-                      Réserver
-                    </Button>
+                    <a
+                      href={service.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="bg-[#8B4513] hover:bg-[#654321]">
+                        Réserver
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -191,7 +215,9 @@ const Services = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-4">{experience.title}</h3>
                 <p className="text-gray-400 mb-4">{experience.description}</p>
-                <p className="text-[#8B4513] font-semibold">{experience.price}</p>
+                <p className="text-[#8B4513] font-semibold">
+                  {experience.price}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -212,11 +238,14 @@ const Services = () => {
             </h2>
             <p className="text-gray-400 mb-8">
               Rejoignez-nous pour un voyage chocolaté inoubliable. Réservez
-              votre expérience dès aujourd'hui et laissez-nous éveiller vos sens.
+              votre expérience dès aujourd'hui et laissez-nous éveiller vos
+              sens.
             </p>
-            <Button size="lg" className="bg-[#8B4513] hover:bg-[#654321]">
-              Contactez-nous
-            </Button>
+            <a href="https://alvo.chat/5sOo" target="_blank">
+              <Button size="lg" className="bg-[#8B4513] hover:bg-[#654321]">
+                Contactez-nous
+              </Button>
+            </a>
           </motion.div>
         </div>
       </section>
@@ -225,4 +254,3 @@ const Services = () => {
 };
 
 export default Services;
-

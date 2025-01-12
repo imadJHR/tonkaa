@@ -1,19 +1,11 @@
-import {
-  Facebook,
-  Instagram,
-  Twitter,
-  Youtube,
-  MapPin,
-  Phone,
-  Mail,
-} from "lucide-react";
+import { Facebook, Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; // Import Link
 import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2c1a0f] text-[#e6ccb2]">
+    <footer className="bg-[#1a0f0f] text-[#e6ccb2]">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-12">
@@ -26,13 +18,17 @@ const Footer = () => {
                 alt="Logo L'atelier Tonka"
               />
             </div>
-            <p className="text-[#d4b08c]">
-              
-            </p>
+            <p className="text-[#d4b08c]"></p>
             <div className="flex space-x-4">
               {[
-                { Icon: Facebook, url: "https://www.facebook.com/profile.php?id=100063664653932" },
-                { Icon: Instagram, url: "https://www.instagram.com/latelier_tonka/" },
+                {
+                  Icon: Facebook,
+                  url: "https://www.facebook.com/profile.php?id=100063664653932",
+                },
+                {
+                  Icon: Instagram,
+                  url: "https://www.instagram.com/latelier_tonka/",
+                },
               ].map(({ Icon, url }, index) => (
                 <motion.a
                   key={index}
@@ -81,10 +77,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-[#8B4513] mt-1" />
-                <span className="text-[#d4b08c]">
-                  123 Boulevard Mohammed V<br />
-                  Casablanca 20000, Maroc
-                </span>
+                <span className="text-[#d4b08c]">Casablanca 20000, Maroc</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-[#8B4513]" />
